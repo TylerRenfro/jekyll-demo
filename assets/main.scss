@@ -1,0 +1,32 @@
+---
+---
+$font-family-base: 'Work Sans';
+// custom variable values
+$primary: #5431ff;
+$secondary: #f93d6e;
+$tertiary: #e89e1e;
+$brand-gray: #dee2e6;
+
+// import the functions & variables from 
+@import "bootstrap/functions";
+@import 'bootstrap/variables';
+@import 'bootstrap/utilities/init';
+
+// custom theme colors map
+$custom-colors: (
+  "primary":    $primary,
+  "secondary": $secondary,
+  "tertiary":   $tertiary,
+  "brand-gray": $brand-gray,
+  "green": $green
+);
+
+$new-values: init-bootstrap($custom-colors);
+
+// Override Bootstrap values
+$theme-colors: map-get($new-values, "theme-colors");
+$utilities: map-get($new-values, "utilities");
+
+// import bootstrap
+@import 'bootstrap/bootstrap';
+@import '_styles';

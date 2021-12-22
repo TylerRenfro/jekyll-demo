@@ -1,0 +1,72 @@
+@import './bootstrap/variables';
+@import './bootstrap/mixins';
+
+.home-hero {    
+    border-radius: 0 0 70px 70px;    
+}
+
+.partner-benefits-section {
+    padding: 8em 0;
+    border-radius: 70px;
+}
+
+.footer-hero {
+    padding: 10em 0;
+    border-radius: 70px 70px 0 0;
+}
+
+@include media-breakpoint-down(sm) {
+    .home-hero {    
+        border-radius: 0 0 20px 20px;    
+    }
+
+    .partner-benefits-section {
+        padding: 8em 0;
+        border-radius: 20px;
+    }    
+
+    .footer-hero {        
+        border-radius: 20px 20px 0 0;
+    }
+    
+}
+
+.company-values-section {
+    padding: 4em 0;
+}
+
+.control-me::after {
+    content: "$25,500/mo";
+    font-size: 1em;
+    font-weight: bold;
+}
+#toggle:checked ~ .control-me::after {
+    content: "$30,000/mo";
+}
+
+.control-me-2::after {
+    content: "$34,000/mo";
+    font-size: 1em;
+    font-weight: bold;
+}
+#toggle-2:checked ~ .control-me-2::after {
+    content: "$40,000/mo";
+}
+
+.control-me-3::after {
+    content: "$42,500/mo";
+    font-size: 1em;
+    font-weight: bold;
+}
+#toggle-3:checked ~ .control-me-3::after {
+    content: "$50,000/mo";
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -100vw;
+}
+
+.footer-wrapper {
+    border-top: solid 1px #333;
+}
